@@ -4,8 +4,8 @@
 .header {
     padding: 5rem 0;
     position: relative;
-    @include m.color;
-
+   
+    
     &::before {
         content: '';
         background-color: v.$negro;
