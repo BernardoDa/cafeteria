@@ -1,4 +1,5 @@
 @use 'variables' as v;
+@use 'base/mixins' as m;
 
 html {
     font-size: 62.5%;
@@ -10,13 +11,19 @@ html {
 }
 
 body{
-    font-family: v.$fuente_regular;
+    font-family: v.$fuenteRegular;
     font-size: 1.6rem;
+    background-color: v.$cafeClaro;
 }
 
 p {
     color: v.$negro;
-    font-size: 2rem;
+    font-size: 1.6rem;
+    line-height: 2;
+
+    @include m.tablet {
+        font-size: 1.8rem;
+    }
 }
 
 .contenedor {
@@ -34,21 +41,9 @@ img {
     display: block;
 }
 
-h1, h2, h3 {
-    margin: 0 0 v.$separacion 0;
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-h1 {
-    font-family: v.$fuente_black;
-    font-size: 4.7rem;
-}
-
-h2 {
-    font-family: v.$fuente_bold;
-    font-size: 2.9rem;
-}
-
-h3 {
-    font-family: v.$fuente_bold;
-    font-size: 2rem;
-}

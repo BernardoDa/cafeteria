@@ -4,7 +4,7 @@
 .header {
     padding: 5rem 0;
     position: relative;
-   
+    min-height: 70rem;
     
     &::before {
         content: '';
@@ -19,6 +19,15 @@
 
     .contenido-header {
         position: relative;
+
+        h1 {
+            text-align: left;
+            color: v.$blanco;
+            margin-top: 5rem;
+            @include m.tablet {
+                margin-top: 10rem;
+            }
+        }
     }
 }
 
