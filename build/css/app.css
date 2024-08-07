@@ -358,6 +358,7 @@ a {
 
 img {
   max-width: 100%;
+  height: auto;
   display: block;
 }
 
@@ -428,7 +429,13 @@ h3 {
 .header {
   padding: 5rem 0;
   position: relative;
-  min-height: 70rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media (min-width: 768px) {
+  .header {
+    min-height: 70rem;
+  }
 }
 .header::before {
   content: "";
@@ -456,6 +463,10 @@ h3 {
 
 .header-inicio {
   background-image: url(../img/header_inicio.jpg);
+}
+
+.header-nosotros {
+  background-image: url(../img/header_nosotros.jpg);
 }
 
 .nav-principal {
@@ -729,4 +740,32 @@ h3 {
   margin: 0 0 1rem 0;
   font-size: 2.4rem;
   color: #C39C63;
+}
+
+@media (min-width: 768px) {
+  .contenido-nosotros {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+.contenido-nosotros .imagen {
+  margin-bottom: 5rem;
+}
+@media (min-width: 768px) {
+  .contenido-nosotros .imagen {
+    margin: 0 2rem 0 0;
+  }
+}
+.contenido-nosotros .imagen img {
+  -webkit-transform: rotate(-6deg);
+          transform: rotate(-6deg);
+  border: 3rem solid #fff;
+  box-shadow: 9px 10px 5px -7px rgba(0, 0, 0, 0.35);
+}
+.contenido-nosotros .texto blockquote {
+  margin: 0;
+  padding: 1rem;
+  font-size: 2rem;
+  border-left: 0.5rem solid #5E311E;
 }

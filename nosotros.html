@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafetería SASS</title>
+    <link rel="stylesheet" href="build/css/app.css"/>
+</head>
+<body>
+    <header class="header header-nosotros">
+        <div class="contenido-header contenedor">
+            <div class="barra">
+                <div class="logo">
+                    <img src="build/img/logo.svg" alt="logo Cafetería">
+                </div>
+                <nav class="nav-principal">
+                    <a href="index.html">Inicio</a>
+                    <a class="activo" href="nosotros.html">Nosotros</a>
+                    <a href="proceso.html">Proceso</a>
+                    <a href="menu.html">Meñú</a>
+                    <a href="galeria.html">Galería</a>
+                    <a href="contacto.html">Contacto</a>
+                </nav>
+            </div>
+            <div class="texto-header">
+                <h1>Una nueva experiencia cada día</h1>
+            </div>
+        </div>
+    </header>
+
+    <main class="contenedor contenido-principal">
+        <h2><span>Conoce más</span>Sobre nosotros</h2>
+
+        <div class="contenido-nosotros">
+            <div class="imagen">
+
+                <picture>
+                    <source
+                        srcset="build/img/nosotros_sidebar.avif"
+                        type="image/avif">
+                    <source
+                        srcset=srcset="build/img/nosotros_sidebar.webp"
+                        type="image/webp">
+                    <source
+                        srcset=srcset="build/img/nosotros_sidebar.jpg"
+                        type="image/jpeg">
+                    <img loading="lazy" decoding="async" src="img/imagen.jpg" lazyalt="imagen" width="500" height="300">
+                </picture>
+            </div>
+
+            <div class="texto">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perferendis ducimus aliquid facilis! 
+                    Quae quos aliquam, architecto soluta doloremque quam consequuntur quaerat odit veniam, sapiente cupiditate
+                     facilis vero minima adipisci.</p>
+
+                     <blockquote>¡Excelente Sabor!</blockquote>
+
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam perferendis ducimus aliquid facilis! 
+                    Quae quos aliquam, architecto soluta doloremque quam consequuntur quaerat odit veniam, sapiente cupiditate
+                     facilis vero minima adipisci.</p>
+            </div>
+        </div>
+
+    </main>
+
+    
+
+    <footer class="footer">
+        <div class="contenedor contenido-footer bg-white">
+            <div class="footer-box ubicacion">
+                <h3>ubicación</h3>
+                <p>Nicolas copernico 190</p>
+                <p>Ciudad de México</p>
+            </div>
+            <div class="footer-box reservacion">
+                <h3>Reservación</h3>
+                <p>Tel. 5512345678</p>
+                <a href="tel: +5512345678">Llamar</a>
+            </div>
+            <div class="footer-box horario">
+                <h3>Horario</h3>
+                <p>lun-jue: 11:00 - 22:00</p>
+                <p>vie-sab: 09:00 - 24:00</p>
+                <p>Domingo: Cerrado</p>
+            </div>
+        </div>
+        <p class="copyright">Todos los derechos reservados. La Cafetería</p>
+    </footer>
+</body>
+</html>
