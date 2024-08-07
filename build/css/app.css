@@ -375,7 +375,7 @@ ul {
   background-color: #5E311E;
 }
 
-h1, h2, h3 {
+h1, h2, .heading-blanco, h3 {
   margin: 0 0 5rem 0;
   text-transform: uppercase;
   line-height: 1.5;
@@ -386,23 +386,34 @@ h1 {
   font-size: 4.7rem;
 }
 
-h2 {
+h2, .heading-blanco {
   font-family: "Roboto-Bold", sans-serif;
   font-size: 2.9rem;
   color: #5E311E;
 }
-h2 span {
+h2 span, .heading-blanco span {
   color: #C39C63;
   font-size: 1.8rem;
   display: block;
 }
-h2::after {
+h2::after, .heading-blanco::after {
   content: "";
   display: block;
   width: 10rem;
   height: 10rem;
   background-image: url(../img/cafe.svg);
   background-size: 10rem;
+}
+
+.heading-blanco {
+  color: #fff;
+  margin-bottom: 5rem;
+}
+.heading-blanco span {
+  color: #fff;
+}
+.heading-blanco::after {
+  display: none;
 }
 
 h3 {
@@ -501,9 +512,6 @@ h3 {
   border-radius: 2.9rem;
   padding: 6rem 2rem;
   margin-top: 5rem;
-}
-.contenido-principal h2 {
-  margin: 0;
 }
 @media (min-width: 768px) {
   .contenido-principal {
@@ -609,4 +617,55 @@ h3 {
   .galeria .imagen:nth-child(10) img {
     width: 62rem;
   }
+}
+
+.nuestro-menu {
+  margin-top: 2rem;
+  background-image: url(../img/menu_arriba.svg), url(../img/menu_abajo.svg), linear-gradient(to top, #5E311E, #5E311E);
+  background-repeat: no-repeat;
+  background-position: center 5rem, center 97%;
+  border-radius: 1.6rem;
+  padding: 15rem 5rem 20rem 5rem;
+}
+@media (min-width: 768px) {
+  .nuestro-menu {
+    padding: 30rem 0 20rem 0;
+  }
+}
+@media (min-width: 1024px) {
+  .nuestro-menu {
+    background-size: 50%, 50%, 100%;
+  }
+}
+.nuestro-menu h2 {
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .nuestro-menu .grid-menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+.nuestro-menu .menu h3 {
+  color: #fff;
+}
+.nuestro-menu .menu li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nuestro-menu .menu li p {
+  color: #fff;
+  font-size: 2.2rem;
+  line-height: 1.5;
+  margin: 0 0 2rem 0;
+}
+.nuestro-menu .menu li p span {
+  display: block;
+  color: #C39C63;
+}
+.nuestro-menu .menu li .precio {
+  font-size: 4rem;
+  font-family: "Roboto-Bold", sans-serif;
 }
